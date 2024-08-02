@@ -13,7 +13,6 @@ def check_login_with_get_method(request):
     else:
         return render(request,"failure.html") 
     
-
 def check_login_with_post_method(request):
     print(request.POST)
     emailid = request.POST.get("emailid")
