@@ -19,3 +19,9 @@ def course_by_cid(request,cid):
         if c['cid']==cid:
             return HttpResponse(c.get("cname"))
     return HttpResponse(f'no course present {cid}')
+
+def course_by_cname(request,cname):
+    return HttpResponse(f'You pass cname as {cname}')
+
+def course_by_slug(request,info):
+    return HttpResponse(f'{info}')
