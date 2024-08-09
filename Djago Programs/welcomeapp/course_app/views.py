@@ -25,3 +25,10 @@ def course_by_cname(request,cname):
 
 def course_by_slug(request,info):
     return HttpResponse(f'{info}')
+
+
+def course_info(request):
+    return render(request,"course_info.html")
+
+
+
