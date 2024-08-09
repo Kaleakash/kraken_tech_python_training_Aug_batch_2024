@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set VIRTUAL_ENV=C:\Users\akash\Desktop\Python with Django\Djago Programs\sample
+set VIRTUAL_ENV=D:\Desktop\Python with Django\Djago Programs\sample
 
 if not defined PROMPT set PROMPT=$P$G
 
