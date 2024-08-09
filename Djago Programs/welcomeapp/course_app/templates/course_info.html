@@ -16,5 +16,19 @@
             <li>{{t}}</li>
         {% endfor %}
     </ol>
+    <br/>
+    <table border="1">
+            <tr>
+                <th>CId</th>
+                <th>Name</th>
+            </tr>
+            {% for course in course_info%}
+               <tr>
+                <td>{{course.cid}}</td>
+                <td>{{course.cname}}</td>
+               </tr> 
+
+            {% endfor %}
+    </table>
 </body>
 </html>

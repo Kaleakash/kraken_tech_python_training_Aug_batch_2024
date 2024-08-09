@@ -7,7 +7,7 @@ course=[
     {"cid":102,"cname":"Node JS"},
     {"cid":103,"cname":"Angular"},
     {"cid":104,"cname":"React JS"},
-    {"cid":105,"cname":"Django"},
+    {"cid":105,"cname":"Django"}
 ]
 # Create your views here.
 def index(request):
@@ -30,7 +30,8 @@ def course_by_slug(request,info):
 def course_info(request):
     context = {"name":"Akash",
                "desg":"Trainer",
-               "tech":["Java","Python","Angular","React JS","Cloud Tech"]
+               "tech":["Java","Python","Angular","React JS","Cloud Tech"],
+               "course_info":course
                }
     return render(request,"course_info.html",context)
 
