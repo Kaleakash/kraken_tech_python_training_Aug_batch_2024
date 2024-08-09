@@ -22,8 +22,8 @@ def add_product_info(request):
 
     global flag
     flag=0
-    for product in list_of_products:
-        if product.get("pid")==pid:
+    for p in list_of_products:
+        if p.get("pid")==pid:
             flag=1;
     
     if flag==0:
