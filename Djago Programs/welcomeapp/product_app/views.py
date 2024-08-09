@@ -17,8 +17,9 @@ def add_product_info(request):
 
     product = {"pid":pid,"pname":pname,"price":price}
 
-    print(product);
     
+    print(product);
+
     global flag
     flag=0
     for product in list_of_products:
@@ -40,6 +41,12 @@ def update_product(request):
     return render(request,"update_product.html")
 
 def view_product(request):
-    return render(request,"view_product.html")
+    context={"products":list_of_products}
+    return render(request,"view_product.html",context)
+
+
+
+
+
 
 
