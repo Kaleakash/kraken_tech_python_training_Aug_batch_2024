@@ -37,6 +37,24 @@ def add_product_info(request):
 def delete_product(request):
     return render(request,"delete_product.html")
 
+def delete_product_info(request):
+    pid = int(request.GET.get("pid"))
+
+    global flag
+    flag=0
+    for p in list_of_products:
+        if p.get("pid")==pid:
+            list_of_products.remove(p)
+            flag=1;
+    
+    if flag==0:
+        context={"result":"Product id not present"} 
+    else:
+        flag=0;
+        context={"result":"Product deleted successfully"} 
+    
+    return render(request,"delete_product.html",context)
+
 def update_product(request):
     return render(request,"update_product.html")
 
