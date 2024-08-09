@@ -1,3 +1,15 @@
 h3{
     color:red;
 }
+body{
+    background-color: bisque;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+header{
+    background-color: yellow;
+    border: 1px red solid;
+}
+footer{
+    background-color: violet;
+    border: 1px red solid;
+}

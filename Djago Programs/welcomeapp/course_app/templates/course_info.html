@@ -1,15 +1,7 @@
-<!DOCTYPE html>
 
-{% load static%}
+{% extends 'base.html' %}
 
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="{% static 'styles.css'%}"/>
-</head>
-<body>
+{% block content%}
     <h3>Course Info</h3>
     <h4>Welcomer user {{name}}, 
         I am {{desg}}</h4>
@@ -35,5 +27,5 @@
 
             {% endfor %}
     </table>
-</body>
-</html>
+
+    {% endblock%}
