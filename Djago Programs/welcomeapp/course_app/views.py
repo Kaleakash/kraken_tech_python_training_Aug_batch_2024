@@ -28,7 +28,16 @@ def course_by_slug(request,info):
 
 
 def course_info(request):
-    return render(request,"course_info.html")
+    context = {"name":"Akash",
+               "desg":"Trainer",
+               "tech":["Java","Python","Angular","React JS","Cloud Tech"]
+               }
+    return render(request,"course_info.html",context)
+
+
+
+
+
 
 
 

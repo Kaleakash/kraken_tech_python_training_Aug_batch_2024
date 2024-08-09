@@ -7,5 +7,14 @@
 </head>
 <body>
     <h3>Course Info</h3>
+    <h4>Welcomer user {{name}}, 
+        I am {{desg}}</h4>
+    <p>{{tech}}</p>
+    <h4>Technologies </h4>
+    <ol>
+        {% for t in tech %}
+            <li>{{t}}</li>
+        {% endfor %}
+    </ol>
 </body>
 </html>
