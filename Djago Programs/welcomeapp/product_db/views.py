@@ -27,6 +27,20 @@ def add_product_info(request):
     context = {"result":"Product details stored successfully"}
     return render(request,"add_product.html",context)
 
+def delete_product(request):
+    return render(request,"delete_product.html")
+
+def delete_product_info(request):
+    pid = request.GET.get("pid")
+
+    result = Product.objects.filter(id=pid).delete()
+    print(result)
+    if result.__contains__(0):
+        context = {"result":"Record not present"}
+    else:
+        context={"result":"Record deleted successfully"}
+    return render(request,"delete_product.html",context)
+
 
 
 
