@@ -19,4 +19,4 @@ class Employee(models.Model):
         db_table="employee"
     
     def __str__(self):
-        return self.employee_name+", working in "+self.department_id.department_name
+        return self.employee_name+", working in "+self.department_id.department_name+" department"
