@@ -42,7 +42,21 @@ def delete_product_info(request):
     return render(request,"delete_product.html",context)
 
 
+def update_product(request):
+    return render(request,"update_product.html")
 
+def update_product_info(request):
+    pid=request.POST.get("pid")
+    price = request.POST.get("price")    
+
+    result = Product.objects.filter(id=pid).update(product_price=price)
+    print(result);
+
+    if result==0:
+        context = {"result":"Record didn't update"}
+    else:
+        context={"result":"Product price update successfully"}
+    return render(request,"update_product.html",context)
 
 
 

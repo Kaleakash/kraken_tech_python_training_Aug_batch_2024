@@ -6,8 +6,18 @@
     <title>Document</title>
 </head>
 <body>
+    <span style="color:red">{{result}}</span>
     <h2>Update Product</h2>
+    <form action="update_product_info" method="post">
+        {% csrf_token %}
+        <label>PId</label>
+        <input type="number" name="pid"/><br/>
+        <label>Price</label>
+        <input type="number" name="price"/><br/>
+        <input type="submit" value="Update Product"/>
+        <input type="reset" value="reset"/>
+    </form>
 
-    <a href="/product_app">Back</a>
+    <a href="/product_db">Back</a>
 </body>
 </html>
