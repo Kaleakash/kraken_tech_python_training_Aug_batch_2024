@@ -27,6 +27,7 @@ urlpatterns = [
     path("course/",include("course_app.urls")),
     path("product_app/",include("product_app.urls")),
     path("product_db/",include("product_db.urls")),
+    path("api/",include("api.urls"))
 ]
 
 
